@@ -12,8 +12,8 @@ router.post('/registrar', async (req, res) => {
         return res.status(400).json({ error: 'Faltan datos obligatorios' });
     }
 
-    const qrUrl = `http://localhost:3000/notas/lote/${lote}/vista`;
-    // const qrUrl = `https://microservicio-blockchain-production.up.railway.app/notas/lote/${encodeURIComponent(lote)}/vista`;
+    // const qrUrl = `http://localhost:3000/notas/lote/${lote}/vista`;
+    const qrUrl = `https://microservices-blockchani.onrender.com/notas/lote/${encodeURIComponent(lote)}/vista`;
 
     try {
         console.log('Generando QR para:', qrUrl);
